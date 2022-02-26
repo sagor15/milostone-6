@@ -27,8 +27,8 @@
 // ৩.১. শূন্য প্যারামিটার ওয়ালা একটা অ্যারো ফাংশন লিখবে যেটা ৮৯ রিটার্ন করবে। 
 
 
-
-
+                                        const sunno = () => 89;
+                                        console.log(sunno());
 
 
 
@@ -36,9 +36,8 @@
 //করে ভাগফল রিটার্ন করবে। 
 
 
-
-
-
+                                        const bagFall = inputOne => (inputOne / 7);
+                                        console.log(bagFall(42));
 
 
 
@@ -46,19 +45,8 @@
 // সেই দুইটা প্যারামিটারকে যোগ করে যোগফলকে দুই দিয়ে ভাগ করে ভাগফল রিটার্ণ করে দাও। 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                        const twoPeraMeters = (peraOne,peraTwo) => (peraOne + peraTwo) / 2;
+                                        console.log(twoPeraMeters(25,25));
 
 
 
@@ -68,10 +56,13 @@
 
 
 
-
-
-
-
+                                        const multipleLIne = (peraOne , peraTwo) =>{
+                                        const firstAdd = peraOne + 7;
+                                        const secondAdd = peraTwo + 7;
+                                        const result = firstAdd + secondAdd;
+                                        return result;
+                                    }
+                                    console.log(multipleLIne(23,23));
 
 
 
@@ -80,7 +71,10 @@
 //ভাগ করে ভাগফল আরেকটা array হিসেবে রাখবে। পুরা কাজটা এক লাইনে হবে। 
 
 
-
+                                    const manyArray = [20,10,30,45,100,200,45,60,12,36];
+                                    const storeArray = manyArray.map( creatFunctionForResult = numberOfArray =>
+                                         numberOfArray / 7 );
+                                    console.log(storeArray);
 
 
 
@@ -88,9 +82,24 @@
 
 // ৫. জাভাস্ক্রিপ্ট এ array এর map, forEach, filter, find কোনটা দিয়ে কি হয়। সেটার একটা সামারি লিখে ফেলো। 
 
+                                        // map 
 
+       // সহজে যদি বলতে চাই map হচ্ছে এরের মদ্যে জত গুলা Element নিয়ে কিছু করে সেই result তাকে return 
+       // করাই হচ্ছে  map এর কাজ 
 
+                                    // forEach
+       // সহজে যদি বলতে চাই forEach হচ্ছে এরের মদ্যে জত গুলা Element নিয়ে কিছু করে কিন্তু  সেই result তাকে return 
+       // করে না ।
 
+                                        // filter
+
+        // সহজে যদি বলতে চাই filter হচ্ছে এরের মদ্যে  Element গুলাকে শর্ত বা condition দিয়ে কাজ করবে এবং পুরা এলিমেন্টকে দিবে 
+        // Array এর মধ্যে । জত এলিমেন্ট গুলা কে পাবে তত গুলা দেখাবে যদি না পাই তাহলে খালি array dekhabe ।
+                                        // find
+         
+        // সহজে যদি বলতে চাই find হচ্ছে এরের মদ্যে  Element গুলাকে শর্ত বা condition দিয়ে কাজ করবে এবং পুরা এলিমেন্টকে দিবে 
+        // Array এর মধ্যে কিন্তু প্রথম যেটা পাবে শুধু সেটাকে রিটার্ন করবে না পাইলে আনডিফাইন্ড দেখাবে                                
+            
 
 // ৬. সিম্পল একটা জাভাস্ক্রিপ্ট অবজেক্ট এর কোন একটা প্রোপার্টিকে ভেরিয়েবল হিসেবে ডিক্লেয়ার করার জন্য destructuring ইউজ করো। 
 //array এর destructuring করবে আর সেটা করার জন্য তুমি এরে এর সেকেন্ড পজিশন এর উপাদান কে destructuring করে 'balance'
