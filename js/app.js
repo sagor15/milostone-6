@@ -28,7 +28,7 @@
 
 
                                         const sunno = () => 89;
-                                        console.log(sunno());
+                                        // console.log(sunno());
 
 
 
@@ -37,7 +37,7 @@
 
 
                                         const bagFall = inputOne => (inputOne / 7);
-                                        console.log(bagFall(42));
+                                        // console.log(bagFall(42));
 
 
 
@@ -46,7 +46,7 @@
 
 
                                         const twoPeraMeters = (peraOne,peraTwo) => (peraOne + peraTwo) / 2;
-                                        console.log(twoPeraMeters(25,25));
+                                        // console.log(twoPeraMeters(25,25));
 
 
 
@@ -62,7 +62,7 @@
                                         const result = firstAdd + secondAdd;
                                         return result;
                                     }
-                                    console.log(multipleLIne(23,23));
+                                    // console.log(multipleLIne(23,23));
 
 
 
@@ -74,7 +74,7 @@
                                     const manyArray = [20,10,30,45,100,200,45,60,12,36];
                                     const storeArray = manyArray.map( creatFunctionForResult = numberOfArray =>
                                          numberOfArray / 7 );
-                                    console.log(storeArray);
+                                    // console.log(storeArray);
 
 
 
@@ -122,7 +122,36 @@
 //এবং ছবির নিচে ছবির টাইটেল দেখাবে। 
 
 
+const loadSportsDb = () =>{
+ fetch("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")
+.then(res => res.json())
+.then(data => displaySportsDb(data.drinks));
+}
 
+loadSportsDb();
+
+const displaySportsDb = sports => {
+   const cardStore = document.getElementById('card-store');
+
+   for(const sport of sports){
+      console.log(sport);
+      const div = document.createElement('div');
+      div.classList.add('card');
+      div.innerHTML = `
+      <img src="${sport.strDrinkThumb}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+      `
+      cardStore.appendChild(div);
+   }
+
+   // sports.forEach( sport => {
+   //    console.log(sport);
+   // });
+}
 
 
 
